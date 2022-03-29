@@ -5,11 +5,10 @@ RequiredType = typing.TypeVar(name='RequiredType')
 CollectionType = typing.TypeVar(name='CollectionType')
 
 
-def binary_search(
-        collection: list,
-        required: RequiredType,
-        key: typing.Callable[[CollectionType], RequiredType] = lambda x: x
-        ) -> typing.Optional[RequiredType]:
+def binary_search(collection: list[CollectionType],
+                  required: RequiredType,
+                  key: typing.Callable[[CollectionType], RequiredType] = lambda x: x
+                  ) -> typing.Optional[RequiredType]:
 
     if not collection:
         return None
